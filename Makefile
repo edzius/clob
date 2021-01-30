@@ -9,7 +9,7 @@ USER_BIN_DIR=~/bin
 
 all:
 
-install: git-completion xcp
+install: git-completion xcp ssh-id
 
 .PHONY: bash-completion
 bash-completion:
@@ -25,3 +25,8 @@ xcp: bash-completion
 	$(MD) $(USER_BIN_DIR)
 	$(IE) xcp.sh $(USER_BIN_DIR)/xcp
 	$(IC) xcp-completion.bash $(BASH_COMPLETION_DIR)
+
+.PHONY: ssh-id
+ssh-id:
+	$(MD) $(USER_BIN_DIR)
+	$(IE) ssh-copy-id-dropbear.sh $(USER_BIN_DIR)/ssh-copy-id-dropbear
