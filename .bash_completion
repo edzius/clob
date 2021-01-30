@@ -1,0 +1,4 @@
+
+for bc in ~/.bash_completion.d/* ; do
+  . $bc
+done
